@@ -29,31 +29,38 @@ function getComputerChoice() {
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
-        console.log('it is a tie!')
-        console.log("#################")
+        alert('it is a tie!');
+        console.log('it is a tie!');
+        console.log("#################");
     } else if (humanChoice === 'rock' && computerChoice === 'paper') {
+        alert('Paper covers rock. You lose!')
         console.log('Paper covers rock. You lose!')
         console.log("#################")
         ++computerScore
     } else if (humanChoice === 'rock' && computerChoice === 'scissors') {
-        console.log('Rock crushes scissors! You win!')
-        console.log("#################")
+        alert('Rock crushes scissors! You win!');
+        console.log('Rock crushes scissors! You win!');
+        console.log("#################");
         ++playerScore
     } else if (humanChoice === 'paper' && computerChoice === 'rock') {
-        console.log('You covered the enemy. You win!')
-        console.log("#################")
+        alert('You covered the enemy. You win!');
+        console.log('You covered the enemy. You win!');
+        console.log("#################");
         ++playerScore
     } else if (humanChoice === 'paper' && computerChoice === 'scissors') {
-        console.log('No! You are being cut up! You lose!')
-        console.log("#################")
+        alert('No! You are being cut up! You lose!');
+        console.log('No! You are being cut up! You lose!');
+        console.log("#################");
         ++computerScore
     } else if (humanChoice === 'scissors' && computerChoice === 'rock') {
-        console.log('You are about to be crushed! You lose!')
-        console.log("#################")
+        alert('You are about to be crushed! You lose!');
+        console.log('You are about to be crushed! You lose!');
+        console.log("#################");
         ++computerScore
     } else if (humanChoice === 'scissors' && computerChoice === 'paper') {
-        console.log('You can cut them up! Great job! You win!')
-        console.log("#################")
+        alert('You can cut them up! Great job! You win!');
+        console.log('You can cut them up! Great job! You win!');
+        console.log("#################");
         ++playerScore
     }
 }
@@ -63,19 +70,30 @@ let playerScore = 0;
 
 function showScore(compScore, userScore) {
     if (userScore === 0 && compScore === 0) {
-        return console.log('The player scored ' + playerScore + 
+        result = ('The player scored ' + playerScore + 
             ' and the computer scored ' + computerScore + 
             ' . Its a draw!')
         
+        console.log(result);
+        alert(result);
+        
     } else if (compScore > userScore) {
-        return console.log('The player scored ' + playerScore + 
+        result = ('The player scored ' + playerScore + 
             ' and the computer scored ' + computerScore + 
             ' . You lose!')
         
+        console.log(result);
+        alert(result);
+        
+        
     } else if (userScore > compScore) {
-        return console.log('The player scored ' + playerScore + 
+        result = ('The player scored ' + playerScore + 
             ' and the computer scored ' + computerScore + 
             ' . You win!')
+        
+        console.log(result);
+        alert(result);
+        
     }
 }
 
